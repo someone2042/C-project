@@ -1,7 +1,6 @@
 #include<stdio.h>
 int main()
 {
-	
 	int m=0;
 	int B=2;
 	int A=10;
