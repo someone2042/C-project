@@ -5,6 +5,7 @@ typedef struct{
     int jour;
     int anne;
     int mois;
+    
 } date;
 
 typedef struct{
