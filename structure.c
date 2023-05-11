@@ -3,7 +3,6 @@
  {
     int var ;
     struct cellule *suiv;
-
  };
  
  typedef struct cellule *liste;
