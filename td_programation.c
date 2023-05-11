@@ -26,5 +26,6 @@ int main()
     {
         printf("t[%d]=%d\n",i,a[i]);
     }
+    
     return 0;
 }
