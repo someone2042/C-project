@@ -5,6 +5,7 @@ int main(void)
     int c=0,g=9,i=0;
     while(i<4)
     {
+        
         if(t[c]=='x')
         {
             c++;
