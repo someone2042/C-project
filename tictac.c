@@ -24,6 +24,7 @@ bool win()
                 else
                 {
                     break;
+                    
                 }
             }
             if(k==j+4)
