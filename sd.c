@@ -19,6 +19,19 @@ polynome ajoute( polynome poly, int exp ,float coef)
         nv->coef=coef;
         nv->exp=exp;
         nv->suiv=NULL;
-        
+        return nv;
+    }
+    else
+    {
+        p==poly;
+        while(p->suiv!=NULL)
+        {
+            p=p->suiv;
+        }
+        nv=(polynome)malloc(sizeof(struct cellule));
+        nv->coef=coef;
+        nv->exp=exp;
+        nv->suiv=NULL;
+        p->suiv=nv;
     }
 }
