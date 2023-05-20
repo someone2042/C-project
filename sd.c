@@ -84,7 +84,22 @@ polynome somme(polynome p1,polynome p2)
 }
 polynome derive(polynome poly)
 {
-    
+    polynome p=poly;
+    polynome dernier;
+    while(p!=NULL)
+    {
+        p->coef=p->coef*p->exp;
+        --p->exp;
+        if(p->exp<0)
+        {
+            dernier->suiv=NULL;
+        }
+        dernier=p;
+        p=p->suiv;
+
+    }
+    return poly;
+    free(p);
 }
 void afficher(polynome poly)
  {
@@ -112,6 +127,9 @@ void main(void)
     afficher(poly2);
     result=somme(poly1,poly2);
     printf("polynome3\n");
+    afficher(result);
+    result = derive(result);
+    printf("polynome4\n");
     afficher(result);
 }
 
