@@ -47,17 +47,17 @@ polynome somme(polynome p1,polynome p2)
     //saisir de premier cellule du somme
     if(p1->exp>p2->exp)
     {
-        somme=ajoute(somme,p1->exp,p1->coef);
+        somme=ajoute(somme,p1->coef,p1->exp);
         pun=p1->suiv;
     }
     if(p1->exp<p2->exp)
     {
-        somme=ajoute(somme,p2->exp,p2->coef);
+        somme=ajoute(somme,p2->coef,p2->exp);
         pdeux=p2->suiv;
     }
     if(p1->exp==p2->exp)
     {
-        somme=ajoute(somme,p1->exp,p2->coef+p1->coef);
+        somme=ajoute(somme,p2->coef+p1->coef,p1->exp);
         pdeux=p2->suiv;
         pun=p1->suiv;
     }
@@ -65,22 +65,26 @@ polynome somme(polynome p1,polynome p2)
     {
         if(pun->exp > pdeux->exp)
         {
-            somme=ajoute(somme,pun->exp,pun->coef);
+            somme=ajoute(somme,pun->coef,pun->exp);
             pun=pun->suiv;
         }
         if(pun->exp < pdeux->exp)
         {
-            somme=ajoute(somme,pdeux->exp,pdeux->coef);
+            somme=ajoute(somme,pdeux->coef,pdeux->exp);
             pdeux=pdeux->suiv;
         }
         if(pun->exp==pdeux->exp)
         {
-            somme=ajoute(somme,pun->exp,pdeux->coef+pun->coef);
+            somme=ajoute(somme,pdeux->coef+pun->coef,pun->exp);
             pdeux=pdeux->suiv;
             pun=pun->suiv;
         }
     }
     return somme;
+}
+polynome derive(polynome poly)
+{
+    
 }
 void afficher(polynome poly)
  {
